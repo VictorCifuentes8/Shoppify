@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'Shopping_Cart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'vida0309ciga99',
+        'NAME': 'product',
+        'OPTIONS':{
+            'init_command': "SET sql_mode= 'STRICT_TRANS_TABLES'"
+        }
     }
 }
 
