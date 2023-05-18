@@ -14,3 +14,4 @@ class CarritoDeCompras(models.Model):
     usuario = models.IntegerField()
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE, to_field="id")
     cantidad = models.IntegerField(default=1)
+    
